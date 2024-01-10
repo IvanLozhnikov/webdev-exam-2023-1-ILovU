@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---Востаржествует комунизм, от всех по способностям всем по потребностям---->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="imgs/ico" href="imgs/icon.ico">
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <title>ExamProject</title>
+</head>
+
+<body class="phon">
+    <!-------------------------------------------------- Навигация ---------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: #b5651d;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="imgs/icon.png" alt="Moscow Landmarks" height="130"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" aria-current="page" href="#index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="lk.html">Личный Кабинет</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Компания
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#blog">Блог</a></li>
+                            <li><a class="dropdown-item" href="#about">О нас</a></li>
+                            <li><a class="dropdown-item" href="#footer">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Экскурсии</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#Tablews">Составить</a></li>
+                            <li><a class="dropdown-item" href="#table2">Выбрать</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-dark h5" href="" target="blank"><i class="fa fa-google-plus-square"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-dark h5" href="" target="blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-dark h5" href="" target="blank"><i class="fa fa-facebook-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-success alert-dismissible fade show w-75 m-auto my-4" role="alert">
+        <strong>Уведомление!</strong> Мы проработали наш личный кабинет теперь он стал еще удобнее. Можете проверить по
+        этой <a href="lk.html">ссылки.</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <!------------------------------------------------------- MAIN --------------------------------------------------------------->
+    <div class="container logo-about d-lg-flex d-md-block flex-row ">
+        <div class="row mt-3">
+            <figure class="figure col-md-6 d-flex justify-content-center flex-column">
+                <img src="imgs/turists.jpg" class="figure-img img-fluid rounded" alt="туристки на красной площади">
+                <figcaption class="figure-caption text-black">Открывай мир. Путешествуй с энтузиазмом</figcaption>
+            </figure>
+            <div class="about h-75 col-md-6 col-sm-12 d-flex align-items-center " id="blog">
+                <p class="text-black  mt-3"> Moscow Landmarks- это компания, которая предлагает уникальные экскурсии по Москве. 
+                    Мы стремимся сделать каждое путешествие интересным и незабываемым. Наш опыт и профессионализм помогут вам 
+                    открыть для себя все красоты и достопримечательности этого прекрасного города.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex flex-column  m-auto">
+        <h1 class="text-center fs-3 text-black mt-3" id="about">Почему нас выбирают</h1>
+        <div class="row justify-content-around align-items-center">
+            <div class="box col-md-5 col-sm-12 text-black m-3 border border-primary p-3">
+                <h5>Наши Цели</h5>
+                <p>Обеспечить хорошее настроение клиентов позновательными и неповторимыми туристическими опытами в сердце России.</p>
+                <p>Наглядно познакомить наших клиентов с историей Москвы и её окресностей.</p>
+            </div>
+            <div class="box col-md-5 text-black col-sm-12 m-3 border border-success p-3">
+                <h5>Наши Услуги</h5>
+                <p><strong>Экскурсии и Гиды:</strong> Исследуйте Москву с опытными гидами, которые расскажут вам
+                    увлекательные истории и покажут живописные точки города.
+                </p>
+                <p><strong>Организация Мероприятий:</strong> Мы создаем уникальные мероприятия для корпоративных
+                    клиентов, индивидуальных групп, и остальных.
+                </p>
+            </div>
+            <div class="box col-md-5 text-black col-sm-12 m-3 border border-info p-3">
+                <h5>Почему Мы?</h5>
+                <p> <strong>Отличное знание города:</strong> Наши эксперты знают Москву вдоль и поперек, что позволяет
+                    создавать уникальные маршруты.
+                </p>
+                <p><strong>Персонализированный Подход:</strong> Мы стремимся понять потребности каждого клиента, чтобы
+                    построить уникальное и запоминающееся путешествие.
+                </p>
+                <p><strong>Качество и Безопасность:</strong> Наша компания следит за качеством клиентского опыта и
+                    обеспечивает безопасность на протяжении всей экскурсии.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+
+    </section>
+    <!-- --------------------------------------------------------MAP----------------------------------------------------------------->
+
+    <div class="row container m-auto" id="Table">
+        <div class="col-md-6 col-sm-10 mx-auto my-5">
+            <div class="input-group m-auto">
+                <input type="text" class="form-control" placeholder="Введите место начала маршрута..." aria-label="Search address"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn text-white btn-outline-success btn-primary" type="button">Искать</button>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+
+        </div>
+    </div>
+
+    </div>
+
+    <!--------------------------------------------------уведомление об ошибки------------------------------------------------------->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </symbol>
+    </svg>
+    <div class="container alert-msg mt-4 d-none position-fixed top-0 start-50 translate-middle-x">
+        <div class="row m-auto">
+            <div class="col-md-12 col-sm-10">
+
+                <div class="alert  alert-danger d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                        <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    <div>
+                        По вашему запросу ничего не найден!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-------------------------------------------------------- Уведомление с сервера ------------------------------------------------->
+    <div class="container mt-4 z-3 alert-msg d-none position-fixed top-0 start-50 translate-middle-x msg-from-server">
+        <div class="row m-auto">
+            <div class="col-md-12 col-sm-10">
+
+                <div class="alert msg-from2 d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                        <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    <div class="main-msg">
+                        По вашему запросу ничего не найден!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------- Секция с поисками ------------------------------------------------------>
+    <div class="container my-5" id="table2">
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-5 col-sm-10 mt-3">
+                <label for="selectRoute" class="form-label text-black">Выберите маршрут</label>
+                <select id="selectRoute" class="form-select" aria-label="Выберите маршрут" placeholder="Введите место начала маршрута...">
+                    <option value="1">Один</option>
+                    <option value="2">Два</option>
+                    <option value="3">Три</option>
+                </select>
+            </div>
+            <div class="col-md-5 col-sm-10 mt-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="input-for-search" class="form-label text-black">Введите маршрут</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-for-search"
+                                    aria-describedby="emailHelp" aria-label="Search address" list="routes-list">
+                                <div class="input-group-append">
+                                    <button class="btn search-btn text-black btn-outline-success btn-primary"
+                                        type="button">Искать</button>
+                                </div>
+                            </div>
+                            <datalist id="routes-list">
+                                <!-- Наши Подсказки -->
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------модальное окно для создание заявки ----------------------------------------------------------->
+
+    <section>
+        
+        <!-- Modal -->
+        <div class="modal fade request-modal" id="addRequestModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Оформление заявки</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <span>ФИО гида:
+                                <span class="gid-name fw-bold"> --- </span>
+                            </span>
+                            <br>
+                            <span>Название маршрута:
+                                <span class="excursion-name fw-bold"></span>
+                            </span>
+                            <form class="add-request-form add-event">
+                                <div class="row my-5">
+
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="date">Дата экскурсии: </label>
+                                        <input type="date" id="date" class="datepicker form-control excursion-date"
+                                            name="date" placeholder="Дата" required>
+                                    </div>
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="start-time">Время начала: </label>
+                                        <input type="time" id="start-time" class="form-control excursion-start"
+                                            name="time" value="09:00" placeholder="Время" min="09:00" max="23:00" step="1800"
+                                            required>
+
+                                    </div>
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="time-select">Длительность экскурсии(час):</label>
+                                        <select name="hours" id="hours-select"
+                                            class="form-select w-100 col-sm-6 hours-selected"
+                                            aria-label="Default select example">
+                                            <option value = 1 selected class="one">1</option>
+                                            <option value = 2 >2</option>
+                                            <option value = 3 >3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="count-people">Количество человек: </label>
+                                        <input type="number" id="count-people" class="form-control people-amount"
+                                            data-bind="value:replyNumber" min="1" max="20" required />
+                                    </div>
+                                </div>
+
+                                <h5>Дополнительные опции</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input option-name" type="checkbox" id="flexCheckDefault" value="">
+                                    <label class="form-check-label fst-italic" for="flexCheckDefault">
+                                        Использовать скидку для школьников и студентов
+                                    </label>
+                                    <br>
+                                    <br>
+                                    <span class="fw-bold ">Описание опции
+                                        <p class="option-description">Скидка 15%.</p>
+                                    </span>
+                                    <br>
+                                    <input class="form-check-input option2" type="checkbox" id="option2" value="">
+                                    <label class="form-check-label fst-italic" for="option2">
+                                        Трансфер до ближайших станций метро после экскурсии
+                                    </label>
+                                    <br>
+                                    <span class="fw-bold ">Описание опции
+                                        <p class="option-description">Повышает стоимость на 25% в выходные дни и на 30% в будние.</p>
+                                    </span>
+                                    <span>Размер надбавки(без учета %):
+                                        <span class="option-discount"> ---</span>
+                                    </span>
+                                </div>
+                                <div class="my-3">
+                                    <p><i class="text-success">Итоговая стоимость: </i>
+                                        <span class="text-success excursion-price">---</span>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary col-md-3 close"
+                                        data-bs-dismiss="modal">Отменить</button>
+                                    <button type="button"
+                                        class="btn btn-primary col-md-3 sendRequest">Отправить</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------- Таблица Экскурсий ------------------------------------------------->
+    <div class="container table-responsive">
+
+        <table class="table table-striped table-hover " id="datatable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Название Маршрута</th>
+                    <th scope="col">Краткое Описание</th>
+                    <th scope="col">Основные Объекты</th>
+                    <th scope="col">Выбор Маршрута</th>
+                </tr>
+            </thead>
+            <tbody class="fillbody">
+                <tr>
+                    <td colspan="4" class="text-center text-white">Нет данных в таблице :) </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <nav aria-label="...">
+        <ul class="pagination pagination-btn d-flex justify-content-center m-auto">
+            <li class="page-item btn-prev disabled">
+                <span class="page-link">Назад</span>
+            </li>
+            <li class="page-item btn-next">
+                <a class="page-link" >Далее</a>
+            </li>
+        </ul>
+    </nav>
+    
+    
+    <template class="template-row">
+        <tr data-id="#" id="id-tr" class="main-table text-white">
+            <th scope="row" class="route ">1</th>
+            <td class="desc">example</td>
+            <td class="mainObjects">Otto</td>
+            <td><button class="chosen-btn btn btn-dark ">Выбрать</button></td>
+        </tr>
+    </template>
+
+    <!------------------------------------------- Секция с гидами --------------------------------------------------->
+    <section class="container">
+        <h5 class="available-gid my-3 text-white">Доступные гиды по маршруту </h5>
+        <div class="d-flex align-items-center justify-content-around">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-5 col-sm-12">
+                    <form id="lang" class="p-3">
+                        <div class="text-center">
+                            <select name="langs" id="form-select" class="my-3 lang-gid"
+                                aria-label="Default select example">
+                                <option disabled selected>Язык экскурсии</option>
+
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-10 d-flex opit-raboty">
+                    <h5 class="mx-4 text-white fs-5">Опыт работы</h5>
+                    <form id="work-from">
+                        <div class="form-outline ms-3">
+                            <input type="number" id="work-from" class="form-control work-from2" />
+                            <label class="from-label text-white">От</label>
+                        </div>
+                    </form>
+                    <form id="work-to">
+                        <div class="form-outline ms-3">
+                            <input type="number" id="work-to" class="form-control work-to2" />
+                            <label class="to-label text-white">До</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="container table-responsive">
+
+            <table class="table table-striped table-hover " id="gid-table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col"></th>
+                        <th scope="col">ФИО</th>
+                        <th scope="col">Языки</th>
+                        <th scope="col">Опыт работы</th>
+                        <th scope="col">Стоимосто услуг в час</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="gid-fillbody">
+                    <tr class="chosen-gids">
+                        <td colspan="7" class="text-center text-white text-msg p-3">Доступных гидов нет или маршрут не
+                            выбран. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- --------------------------------------------------C---------------------------------------------------------------------- -->
+
+        <div class="alert alert-warning alert-message d-none position-fixed top-0 start-50 translate-middle-x alert-dismissible fade show"
+            role="alert">
+            <strong class="alert-msg1">Упс!</strong class="alert-msg2"> You should check in on some of those fields
+            below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- --------------------------------------------------C---------------------------------------------------------------------- -->
+
+        <template class="template-row-gid">
+            <tr class="gid-tr git-table text-white">
+                <td scope="row" data-route-id="" class="id-git-route align-middle">1</th>
+                <th class="img fs-1 align-middle">🙋‍♂️</th>
+                <td class="FIO align-middle">example</td>
+                <td class="language align-middle">Uzkiy</td>
+                <td class="workExperience align-middle">1</td>
+                <td class="PricePerHour align-middle">1913</td>
+                <td class="align-middle"><button type="button" class="choose btn btn-dark" data-bs-toggle="modal"
+                        data-bs-target="#addRequestModal">
+                        Выбрать
+                    </button></td>
+
+            </tr>
+        </template>
+        <template class="template-gid">
+            <tr class="chosen-gids git-table">
+                <td colspan="7" class="text-center text-white text-msg p-3">Доступных гидов нет или маршрут не выбран.
+                </td>
+            </tr>
+        </template>
+    </section>
+    <!------------------------------------------------- FOOTER -------------------------------------------------------->
+    <footer class="bg-body-tertiary text-center text-lg-start  mt-5" style="background-color: #c5c9c7;" id="footer">
+
+        <div class="container-fluid p-4">
+
+            <div class="row text-justify justify-content-center">
+
+                <div class="col-lg-4 col-md-10 mb-4 mb-md-0 ">
+                    <h5 class="text-uppercase text-black">Отправляйтесь в уникальные путешествия</h5>
+                    <p class="text-black">
+                        С нашим сервисом вы сможете отправиться в захватывающее приключение по Москве!
+                        Без труда закажите билеты и вперёд на встречу невероятному опыту!
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-10 mb-4 mb-md-0 ">
+                    <h5 class="text-uppercase text-black">Связаться с нами</h5>
+                    <p class="text-black">
+                        Номер:7(777)777-77-77
+                        Почта:mail@mail.ru
+                    </p>
+                    <a class="btn btn-white" href="mailto:mail@mail.ru">Написать нам</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="text-center p-3" style="background-color: #b5651d;">
+            © 2024 Copyright:
+            <a class="text-body" href="#">MoscowLandmarks. Все права защищены.</a>
+        </div>
+
+    </footer>
+    <!------------------------------------------------------------------------------------------------------------>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
