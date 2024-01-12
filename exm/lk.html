@@ -66,93 +66,20 @@
     </nav>
     <!---------------------------------------------------- MAIN------------------------------------------------- --> 
         <!-- Modal -->
-        <div class="modal fade request-modal" id="addRequestModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade request-modal" id="DELETERequestModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="">Оформление заявки</h5>
+                        <h5 class="modal-title" id="">Вы уверены?</h5>
                     </div>
                     <div class="modal-body">
-                        <div>
-                            <span>ФИО гида:
-                                <span class="gid-name fw-bold"> --- </span>
-                            </span>
-                            <br>
-                            <span>Название маршрута:
-                                <span class="excursion-name fw-bold"></span>
-                            </span>
-                            <form class="add-request-form add-event">
-                                <div class="row my-5">
-
-                                    <div class="col-sm-6 pt-3">
-                                        <label for="date">Дата экскурсии: </label>
-                                        <input type="date" id="date" class="datepicker form-control excursion-date"
-                                            name="date" placeholder="Дата" required>
-                                    </div>
-                                    <div class="col-sm-6 pt-3">
-                                        <label for="start-time">Время начала: </label>
-                                        <input type="time" id="start-time" class="form-control excursion-start"
-                                            name="time" value="09:00" placeholder="Время" min="09:00" max="23:00" step="1800"
-                                            required>
-
-                                    </div>
-                                    <div class="col-sm-6 pt-3">
-                                        <label for="time-select">Длительность экскурсии(час):</label>
-                                        <select name="hours" id="hours-select"
-                                            class="form-select w-100 col-sm-6 hours-selected"
-                                            aria-label="Default select example">
-                                            <option value = 1 selected class="one">1</option>
-                                            <option value = 2 >2</option>
-                                            <option value = 3 >3</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-6 pt-3">
-                                        <label for="count-people">Количество человек: </label>
-                                        <input type="number" id="count-people" class="form-control people-amount"
-                                            data-bind="value:replyNumber" min="1" max="20" required />
-                                    </div>
-                                </div>
-
-                                <h5>Дополнительные опции</h5>
-                                <div class="form-check">
-                                    <input class="form-check-input option-name" type="checkbox" id="flexCheckDefault" value="">
-                                    <label class="form-check-label fst-italic" for="flexCheckDefault">
-                                        Использовать скидку для школьников и студентов
-                                    </label>
-                                    <br>
-                                    <br>
-                                    <span class="fw-bold ">Описание опции
-                                        <p class="option-description">Скидка 15%.</p>
-                                    </span>
-                                    <br>
-                                    <input class="form-check-input option2" type="checkbox" id="option2" value="">
-                                    <label class="form-check-label fst-italic" for="option2">
-                                        Трансфер до ближайших станций метро после экскурсии
-                                    </label>
-                                    <br>
-                                    <span class="fw-bold ">Описание опции
-                                        <p class="option-description">Повышает стоимость на 25% в выходные дни и на 30% в будние.</p>
-                                    </span>
-                                    <span>Размер надбавки(без учета %):
-                                        <span class="option-discount"> ---</span>
-                                    </span>
-                                </div>
-                                <div class="my-3">
-                                    <p><i class="text-success">Итоговая стоимость: </i>
-                                        <span class="text-success excursion-price">---</span>
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary col-md-3 close"
-                                        data-bs-dismiss="modal">Отменить</button>
-                                    <button type="button"
-                                        class="btn btn-primary col-md-3 sendRequest">Отправить</button>
-                                </div>
-
-                            </form>
-
-                        </div>
+                        <form class="add-request-form add-event-1">
+                            <div>
+                                <button class="btn btn-dark data-bs-dismiss="modal"">Нет</button>
+                                <button class="choose btn btn-dark ">Да</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -192,10 +119,10 @@
     <template class="template-row">
         <tr data-id="#" id="id-tr" class="main-table text-white">
             <th scope="row" class="route ">1</th>
-            <td class="desc">example</td>
-            <td class="mainObjects">example</td>
-            <td class="SecondObjects">example</td>
-            <td><button class="chosen-btn btn btn-dark ">Выбрать</button></td>
+            <td class="person">example</td>
+            <td class="GidName">example</td>
+            <td class="StudentName">example</td>
+            <td><button type="button" class="chosen-btn btn btn-dark " data-bs-toggle="modal" data-bs-target="#DELETERequestModal">Удалить</button></td>
         </tr>
     </template>
      <!------------------------------------------------- FOOTER -------------------------------------------------------->
