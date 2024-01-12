@@ -22,10 +22,7 @@ function saveToSessionStorage(data) {
 }
 let getRequestMainTable = async function (url, method) {
     if (method == 'GET') {
-        return await fetch(url, {
-
-        });
-
+        return await fetch(url, { });
     }
 };
 // --------------------------------------------------------таблица с гидами---------------------------------------------------------------
@@ -133,9 +130,6 @@ function DeleteGid(routeId, method) {
 }
 
 //-------------------------------------------------Добавление Записей----------------------------------------------------------
-
-
-// обязательное анализ кода и исправление некоторых данных
 function fillTable(data) {
     let tableBody = document.querySelector('.fillbody');
     let template = document.querySelector('.template-row');
@@ -506,7 +500,7 @@ function conditionOfModalForm() {
 }
 // ------------------------------------------------Добовляем прослушку эвентов для элементов полей---------------------------------------------------------- 
 function isEndOfWeek(date) {
-    const holidays = [
+    const endweeks = [
       //январь------------------февраль-----------------март--------------------апрель------------------май---------------------июнь--------------------июль--------------------август------------------сентябрь----------------октябрь-----------------ноябрь------------------декабрь
         new Date('2024-01-06'), new Date('2024-02-03'), new Date('2024-03-02'), new Date('2024-04-06'), new Date('2024-05-04'), new Date('2024-06-01'), new Date('2024-07-06'), new Date('2024-08-03'), new Date('2024-09-01'), new Date('2024-10-05'), new Date('2024-11-02'), new Date('2024-12-01'),
         new Date('2024-01-07'), new Date('2024-02-04'), new Date('2024-03-03'), new Date('2024-04-07'), new Date('2024-05-05'), new Date('2024-06-02'), new Date('2024-07-07'), new Date('2024-08-04'), new Date('2024-09-07'), new Date('2024-10-06'), new Date('2024-11-03'), new Date('2024-12-07'),
@@ -519,8 +513,8 @@ function isEndOfWeek(date) {
                                                         new Date('2024-03-30'),                                                 new Date('2024-06-29'),                         new Date('2024-08-31'), new Date('2024-09-29'),                         new Date('2024-11-30'), new Date('2024-12-29'),
                                                         new Date('2024-03-31'),                                                 new Date('2024-06-30'),
     ];
-    for (const holiday of holidays) {
-        if (date.toISOString().split('T')[0] == holiday.toISOString().split('T')[0] || date.getDay() == 6 || date.getDay() == 0) {
+    for (const endweek of endweeks) {
+        if (date.toISOString().split('T')[0] == endweek.toISOString().split('T')[0] || date.getDay() == 6 || date.getDay() == 0) {
             console.log('Сегодня выходной!');
             return true;
         }
@@ -620,6 +614,7 @@ document.querySelector('.add-event').addEventListener('change', () => {
         optionOne = false;
     }
     let isThisDayOff = false;
+    let isThisWeekEnd = false;
     let isItMorning = false;
     let isItEvening = false;
     let nadbavka = 0;

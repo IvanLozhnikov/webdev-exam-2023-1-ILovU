@@ -3,12 +3,14 @@
     margin: 0;
 }
 body{margin-top:20px;}
-.cover-background {
-    position: relative !important;
-    background-size: cover !important;
-    overflow: hidden !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+.phon {
+    background: #b5651d;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7DF9FF, #ffdf00);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7DF9FF, #ffdf00);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .p-0 {
     padding: 0!important;
@@ -39,4 +41,17 @@ section {
 }
 .mb-4 {
     margin-bottom: 1.5rem!important;
+}
+.p-top{
+padding-top: 30px;
+}
+.main-table
+{
+    background: #c5c9c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c5c9c7, #b5651d);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c5c9c7, #b5651d);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

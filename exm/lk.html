@@ -12,11 +12,11 @@
     <title>Document</title>
 </head>
 
-<body class="d-flex flex-column body">
+<body class="d-flex flex-column body phon">
     <!---------------------------------------------------- Навигация -------------------------------------------------- -->
-    <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: #b5651d;">
+    <nav class="navbar navbar-expand-lg navbar-light p-0" style="background-color: #b5651d;">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="imgs/icon.png" alt="Moscow Landmarks" height="130"></a>
+            <a class="navbar-brand p-0" href="index.html"><img src="imgs/icon.png" alt="Moscow Landmarks" height="130"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,23 +64,140 @@
             </div>
         </div>
     </nav>
-    <!---------------------------------------------------- MAIN------------------------------------------------- -->
-    <section class="p-0 bg-img z-1000 cover-background" style="background-image: url(https://bootdey.com/img/Content/bg1.jpg);">
-        <div class="container-fluid d-flex flex-column">
-            <div class="row align-items-center justify-content-center min-vh-100">
-                <div class="col-md-9 col-lg-6 my-5">
-                    <div class="text-center error-page">
-                        <h1 class="mb-0 text-secondary">404</h1>
-                        <h2 class="mb-4 text-white">Упс, что то пошло не так!</h2>
-                        <p class="w-sm-80 mx-auto mb-4 text-white">Хотели как лучше, но случайно сломали всю систему ЛК. Приносим свои извинении :( С проблемой можете ознакомиться <a class="fw-bold text-danger" href="#">тут</a></p>
+    <!---------------------------------------------------- MAIN------------------------------------------------- --> 
+        <!-- Modal -->
+        <div class="modal fade request-modal" id="addRequestModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="">Оформление заявки</h5>
+                    </div>
+                    <div class="modal-body">
                         <div>
-                            <a href="index.html" class="btn btn-info btn-lg me-sm-2 mb-2 mb-sm-0">Вернуться домой</a>
+                            <span>ФИО гида:
+                                <span class="gid-name fw-bold"> --- </span>
+                            </span>
+                            <br>
+                            <span>Название маршрута:
+                                <span class="excursion-name fw-bold"></span>
+                            </span>
+                            <form class="add-request-form add-event">
+                                <div class="row my-5">
+
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="date">Дата экскурсии: </label>
+                                        <input type="date" id="date" class="datepicker form-control excursion-date"
+                                            name="date" placeholder="Дата" required>
+                                    </div>
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="start-time">Время начала: </label>
+                                        <input type="time" id="start-time" class="form-control excursion-start"
+                                            name="time" value="09:00" placeholder="Время" min="09:00" max="23:00" step="1800"
+                                            required>
+
+                                    </div>
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="time-select">Длительность экскурсии(час):</label>
+                                        <select name="hours" id="hours-select"
+                                            class="form-select w-100 col-sm-6 hours-selected"
+                                            aria-label="Default select example">
+                                            <option value = 1 selected class="one">1</option>
+                                            <option value = 2 >2</option>
+                                            <option value = 3 >3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 pt-3">
+                                        <label for="count-people">Количество человек: </label>
+                                        <input type="number" id="count-people" class="form-control people-amount"
+                                            data-bind="value:replyNumber" min="1" max="20" required />
+                                    </div>
+                                </div>
+
+                                <h5>Дополнительные опции</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input option-name" type="checkbox" id="flexCheckDefault" value="">
+                                    <label class="form-check-label fst-italic" for="flexCheckDefault">
+                                        Использовать скидку для школьников и студентов
+                                    </label>
+                                    <br>
+                                    <br>
+                                    <span class="fw-bold ">Описание опции
+                                        <p class="option-description">Скидка 15%.</p>
+                                    </span>
+                                    <br>
+                                    <input class="form-check-input option2" type="checkbox" id="option2" value="">
+                                    <label class="form-check-label fst-italic" for="option2">
+                                        Трансфер до ближайших станций метро после экскурсии
+                                    </label>
+                                    <br>
+                                    <span class="fw-bold ">Описание опции
+                                        <p class="option-description">Повышает стоимость на 25% в выходные дни и на 30% в будние.</p>
+                                    </span>
+                                    <span>Размер надбавки(без учета %):
+                                        <span class="option-discount"> ---</span>
+                                    </span>
+                                </div>
+                                <div class="my-3">
+                                    <p><i class="text-success">Итоговая стоимость: </i>
+                                        <span class="text-success excursion-price">---</span>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary col-md-3 close"
+                                        data-bs-dismiss="modal">Отменить</button>
+                                    <button type="button"
+                                        class="btn btn-primary col-md-3 sendRequest">Отправить</button>
+                                </div>
+
+                            </form>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    <div class="container table-responsive p-top">
+
+        <table class="table table-striped table-hover " id="datatable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Название Маршрута</th>
+                    <th scope="col">Количество человек</th>
+                    <th scope="col">Имя гида</th>
+                    <th scope="col">Заказчик</th>
+                    <th scope="col">Настройки</th>
+                </tr>
+            </thead>
+            <tbody class="fillbody">
+                <tr>
+                    <td colspan="5" class="text-center text-white">Нет данных в таблице :) </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <nav aria-label="...">
+        <ul class="pagination pagination-btn d-flex justify-content-center m-auto">
+            <li class="page-item btn-prev disabled">
+                <span class="page-link">Назад</span>
+            </li>
+            <li class="page-item btn-next">
+                <a class="page-link" >Далее</a>
+            </li>
+        </ul>
+    </nav>
+    
+    
+    <template class="template-row">
+        <tr data-id="#" id="id-tr" class="main-table text-white">
+            <th scope="row" class="route ">1</th>
+            <td class="desc">example</td>
+            <td class="mainObjects">example</td>
+            <td class="SecondObjects">example</td>
+            <td><button class="chosen-btn btn btn-dark ">Выбрать</button></td>
+        </tr>
+    </template>
      <!------------------------------------------------- FOOTER -------------------------------------------------------->
     <footer class="mt-auto bg-body-tertiary text-center text-lg-start mt-5" style="background-color: #b5651d;" id="footer">
 
@@ -92,7 +209,7 @@
 
     </footer>
     <!------------------------------------------------------------------------------------------------------------>
-
+    <script src="index1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
